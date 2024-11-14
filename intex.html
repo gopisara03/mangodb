@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon-inspired Watch Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+        }
+        header {
+            background-color: #131921;
+            color: white;
+            padding: 10px 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        .search-bar {
+            flex-grow: 1;
+            margin: 0 20px;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        .hero {
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .cta-button {
+            background-color: #ff9900;
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .product-info {
+            padding: 20px;
+        }
+        .product-brand {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .product-name {	
+            color: #555;
+            margin-top: 5px;
+        }
+        .product-price {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .shop-now {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .add-to-cart {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #ff9900;
+            color: black;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            margin-top: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #131921;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">amazon</a>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for watches">
+            </div>
+            <div class="nav-links">
+                <a href="#">Account</a>
+                <a href="#">Orders</a>
+                <a href="#">Cart</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Discover Timeless Elegance</h1>
+            <p>Explore our collection of premium watches</p>
+            <a href="#product-grid" class="cta-button">Shop Now</a>
+        </section>
+
+        <section id="product-grid" class="product-grid">
+            <div class="product-card">
+                <img src="https://assets.onecompiler.app/42xq2j5ah/42xq2hhxx/titan.png" alt="Titan Watch">
+                <div class="product-info">
+                    <div class="product-brand">Titan</div>
+                    <div class="product-name">Elegant Classic</div>
+                    <div class="product-price">₹5,999</div>
+                    <a href="titan.html" class="shop-now">Shop Now</a>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://assets.onecompiler.app/42xq2j5ah/42xq2kpwj/fasttrack.png" alt="Fastrack Watch">
+                <div class="product-info">
+                    <div class="product-brand">Fastrack</div>
+                    <div class="product-name">Sport Pro</div>
+                    <div class="product-price">₹3,499</div>
+                    <a href="fasttrack.html" class="shop-now">Shop Now</a>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://assets.onecompiler.app/42xq2j5ah/42xq2kpwj/casio.png" alt="Casio Watch">
+                <div class="product-info">
+                    <div class="product-brand">Casio</div>
+                    <div class="product-name">G-Shock Tough</div>
+                    <div class="product-price">₹8,999</div>
+                    <a href="casio.html" class="shop-now">Shop Now</a>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://assets.onecompiler.app/42xq2j5ah/42xq2kpwj/fossil.png" alt="Fossil Watch">
+                <div class="product-info">
+                    <div class="product-brand">Fossil</div>
+                    <div class="product-name">Minimalist Hybrid</div>
+                    <div class="product-price">₹12,999</div>
+                    <a href="fossil.html" class="shop-now">Shop Now</a>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Amazon-inspired Watch Page. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+Logo ku
+<nav>
+            <a href="index.html" class="logo-container">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 602 180" role="img" aria-label="Amazon logo">
+                    <path fill="#FF9900" d="M374.006 142.184c-35 25.797-85.729 39.561-129.406 39.561-61.242 0-116.376-22.651-158.087-60.325-3.278-2.962-.341-7 3.591-4.693 45.015 26.191 100.673 41.947 158.166 41.947 38.775 0 81.43-8.022 120.65-24.67 5.925-2.516 10.88 3.88 5.086 8.18z"/>
+                    <path fill="#FF9900" d="M388.557 125.536c-4.457-5.715-29.573-2.7-40.846-1.363-3.434.419-3.959-2.569-.865-4.719 20.003-14.078 52.827-10.015 56.654-5.296 3.828 4.745-.996 37.648-19.793 53.352-2.884 2.411-5.637 1.127-4.352-2.072 4.22-10.539 13.685-34.16 9.202-39.902z"/>
+                    <path fill="#FFFFFF" d="M348.497 20.066V6.381c0-2.071 1.573-3.46 3.461-3.46h61.269c1.966 0 3.54 1.415 3.54 3.46v11.62c-.027 1.966-1.679 4.535-4.615 8.599l-31.749 45.329c11.798-.289 24.25 1.468 34.947 7.498 2.412 1.363 3.068 3.356 3.251 5.322v14.474c0 1.992-2.202 4.325-4.509 3.12-18.85-9.884-43.887-10.96-64.73.104-2.123 1.154-4.351-1.153-4.351-3.146v-13.737c0-2.229.026-6.03 2.254-9.412l36.782-52.748h-32.011c-1.967 0-3.54-1.39-3.54-3.461zM124.999 105.454h-18.64c-1.783-.13-3.199-1.468-3.33-3.172V6.617c0-1.914 1.6-3.435 3.592-3.435h17.382c1.809.079 3.25 1.468 3.382 3.199v12.505h.34c4.536-12.086 13.056-17.722 24.54-17.722 11.666 0 18.954 5.636 24.198 17.722 4.509-12.086 14.76-17.722 25.744-17.722 7.813 0 16.36 3.224 21.577 10.46 5.899 8.049 4.693 19.741 4.693 29.992l-.026 60.378c0 1.913-1.6 3.461-3.592 3.461h-18.614c-1.862-.13-3.356-1.625-3.356-3.461V51.29c0-4.037.367-14.104-.524-17.932-1.39-6.423-5.558-8.232-10.959-8.232-4.509 0-9.228 3.015-11.142 7.839-1.914 4.824-1.73 12.898-1.73 18.325v50.704c0 1.913-1.6 3.461-3.592 3.461h-18.614c-1.888-.13-3.356-1.625-3.356-3.461l-.026-50.704c0-10.67 1.757-26.374-11.483-26.374-13.397 0-12.872 15.311-12.872 26.374v50.704c0 1.913-1.6 3.461-3.592 3.461zM469.514 1.164c27.66 0 42.629 23.752 42.629 53.954 0 29.18-16.543 52.329-42.629 52.329-27.16 0-41.947-23.753-41.947-53.352 0-29.782 14.97-52.931 41.947-52.931zm.158 19.531c-13.738 0-14.603 18.719-14.603 30.385 0 11.693-.184 36.651 14.445 36.651 14.446 0 15.127-20.134 15.127-32.404 0-8.075-.341-17.723-2.779-25.378-2.097-6.659-6.266-9.254-12.19-9.254zM548.009 105.454h-18.562c-1.861-.13-3.356-1.625-3.356-3.461l-.026-95.691c.157-1.756 1.704-3.12 3.592-3.12h17.277c1.625.079 2.962 1.18 3.33 2.674v14.63h.34c5.217-13.083 12.532-19.322 25.404-19.322 8.363 0 16.517 3.015 21.76 11.273 4.877 7.655 4.877 20.528 4.877 29.782v60.22c-.21 1.678-1.757 3.015-3.592 3.015h-18.693c-1.704-.13-3.12-1.39-3.303-3.015V50.478c0-10.461 1.206-25.771-11.667-25.771-4.535 0-8.704 3.041-10.775 7.655-2.622 5.846-2.962 11.667-2.962 18.116v51.516c-.026 1.913-1.652 3.461-3.644 3.461zM299.291 59.512c0-7.262.184-13.318-3.487-19.767-2.962-5.243-7.682-8.468-12.898-8.468-7.157 0-11.352 5.453-11.352 13.502 0 15.887 14.236 18.771 27.737 18.771v-4.038zm18.797 45.434c-1.232 1.101-3.015 1.18-4.404.446-6.187-5.139-7.314-7.524-10.696-12.427-10.225 10.434-17.487 13.554-30.726 13.554-15.704 0-27.895-9.674-27.895-29.048 0-15.127 8.18-25.43 19.872-30.464 10.12-4.457 24.25-5.243 35.052-6.476v-2.412c0-4.43.341-9.674-2.281-13.502-2.255-3.434-6.607-4.85-10.46-4.85-7.105 0-13.423 3.644-14.97 11.195-.315 1.678-1.547 3.33-3.251 3.408l-18.063-1.94c-1.521-.341-3.225-1.573-2.779-3.906C250.85 3.644 277.828 0 302.499 0c12.532 0 28.907 3.33 38.775 12.795 12.532 11.667 11.352 27.236 11.352 44.201v40.025c0 12.06 5.007 17.355 9.725 23.887 1.652 2.308 2.02 5.06-.079 6.764-5.243 4.404-14.603 12.636-19.74 17.277l-.026-.003z"/>
+                </svg>
+            </a>
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Fasttrack - Amazon-inspired Watch Page</title>
+                <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                        margin: 0;
+                        padding: 0;
+                        background-color: #f3f3f3;
+                    }
+                    header {
+                        background-color: #131921;
+                        color: white;
+                        padding: 10px 0;
+                    }
+                    nav {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        max-width: 1200px;
+                        margin: 0 auto;
+                        padding: 0 20px;
+                    }
+                    .logo {
+                        font-size: 24px;
+                        font-weight: bold;
+                        color: white;
+                        text-decoration: none;
+                    }
+                    .search-bar {
+                        flex-grow: 1;
+                        margin: 0 20px;
+                    }
+                    .search-bar input {
+                        width: 100%;
+                        padding: 10px;
+                        border: none;
+                        border-radius: 4px;
+                    }
+                    .nav-links a {
+                        color: white;
+                        text-decoration: none;
+                        margin-left: 20px;
+                    }
+                    .product-detail {
+                        max-width: 1200px;
+                        margin: 40px auto;
+                        padding: 0 20px;
+                        display: flex;
+                        gap: 40px;
+                    }
+                    .product-image {
+                        flex: 1;
+                    }
+                    .product-image img {
+                        width: 100%;
+                        height: auto;
+                        border-radius: 8px;
+                    }
+                    .product-info {
+                        flex: 1;
+                    }
+                    .product-brand {
+                        font-size: 24px;
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                    }
+                    .product-name {
+                        font-size: 36px;
+                        margin-bottom: 20px;
+                    }
+                    .product-price {
+                        font-size: 24px;
+                        font-weight: bold;
+                        margin-bottom: 20px;
+                    }
+                    .product-description {
+                        margin-bottom: 20px;
+                        line-height: 1.6;
+                    }
+                    .add-to-cart {
+                        display: inline-block;
+                        padding: 10px 20px;
+                        background-color: #ff9900;
+                        color: black;
+                        text-decoration: none;
+                        border-radius: 4px;
+                        font-weight: bold;
+                    }
+                    .back-to-products {
+                        display: inline-block;
+                        padding: 10px 20px;
+                        background-color: #3498db;
+                        color: white;
+                        text-decoration: none;
+                        border-radius: 4px;
+                        font-weight: bold;
+                        margin-right: 10px;
+                    }
+                    footer {
+                        background-color: #131921;
+                        color: white;
+                        text-align: center;
+                        padding: 20px 0;
+                        margin-top: 40px;
+                    }
+                </style>
+            </head>
+            <body>
+                <header>
+                    <nav>
+                        <a href="index.html" class="logo">amazon</a>
+                        <div class="search-bar">
+                            <input type="text" placeholder="Search for watches">
+                        </div>
+                        <div class="nav-links">
+                            <a href="#">Account</a>
+                            <a href="#">Orders</a>
+                            <a href="#">Cart</a>
+                        </div>
+                    </nav>
+                </header>
+            
+                <main>
+                    <section class="product-detail">
+                        <div class="product-image">
+                            <img src="https://assets.onecompiler.app/42xq2j5ah/42xq2kpwj/fasttrack.png" alt="fasttrack Elegant Classic Watch">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">Fastrack</div>
+                            <h1 class="product-name">Sport Pro</h1>
+                            <div class="product-price">₹3,499</div>
+                            <div class="product-description">
+                                <p>The Fast Track Sport Pro is a timeless masterpiece that combines sophistication with functionality. This watch features:</p>
+                                <ul>
+                                    <li>Sleek stainless steel case</li>
+                                    <li>Genuine leather strap</li>
+                                    <li>Water-resistant up to 30 meters</li>
+                                    <li>Scratch-resistant sapphire crystal</li>
+                                    <li>Japanese quartz movement for precise timekeeping</li>
+                                </ul>
+                                <p>Perfect for both formal occasions and everyday wear, the Titan Elegant Classic is a versatile addition to any watch collection.</p>
+                            </div>
+                            <a href="index.html" class="back-to-products">Back to Products</a>
+                            <a href="#" class="add-to-cart">Add to Cart</a>
+                        </div>
+                    </section>
+                </main>
+            
+                <footer>
+                    <p>&copy; 2024 Amazon-inspired Watch Page. All rights reserved.</p>
+                </footer>
+            </body>
+            </html>
+            <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon-inspired Watch Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+        }
+        header {
+            background-color: #131921;
+            color: white;
+            padding: 10px 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        .search-bar {
+            flex-grow: 1;
+            margin: 0 20px;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        .hero {
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .cta-button {
+            background-color: #ff9900;
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .product-info {
+            padding: 20px;
+        }
+        .product-brand {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .product-name {	
+            color: #555;
+            margin-top: 5px;
+        }
+        .product-price {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .shop-now {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .add-to-cart {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #ff9900;
+            color: black;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            margin-top: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        footer {
+            background-color: #131921;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">amazon</a>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for watches">
+            </div>
+            <div class="nav-links">
+                <a href="#">Account</a>
+                <a href="#">Orders</a>
+                <a href="#">Cart</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Discover Timeless Elegance</h1>
+            <p>Explore our collection of premium watches</p>
+            <a href="#product-grid" class="cta-button">Shop Now</a>
+        </section>
+
+        <section id="product-grid" class="product-grid">
+            <div class="product-card">
+                <img src="https://assets.onecompiler.app/42xq2j5ah/42xq2hhxx/titan.png" alt="Titan Watch">
+                <div class="product-info">
+                    <div class="product-brand">Titan</div>
+                    <div class="product-name">Elegant Classic</div>
+                    <div class="product-price">₹5,999</div>
+                    <a href="titan.html" class="shop-now">Shop Now</a>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://assets.onecompiler.app/42xq2j5ah/42xq2kpwj/fasttrack.png" alt="Fastrack Watch">
+                <div class="product-info">
+                    <div class="product-brand">Fastrack</div>
+                    <div class="product-name">Sport Pro</div>
+                    <div class="product-price">₹3,499</div>
+                    <a href="fasttrack.html" class="shop-now">Shop Now</a>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://assets.onecompiler.app/42xq2j5ah/42xq2kpwj/casio.png" alt="Casio Watch">
+                <div class="product-info">
+                    <div class="product-brand">Casio</div>
+                    <div class="product-name">G-Shock Tough</div>
+                    <div class="product-price">₹8,999</div>
+                    <a href="casio.html" class="shop-now">Shop Now</a>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://assets.onecompiler.app/42xq2j5ah/42xq2kpwj/fossil.png" alt="Fossil Watch">
+                <div class="product-info">
+                    <div class="product-brand">Fossil</div>
+                    <div class="product-name">Minimalist Hybrid</div>
+                    <div class="product-price">₹12,999</div>
+                    <a href="fossil.html" class="shop-now">Shop Now</a>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Amazon-inspired Watch Page. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+Logo ku
+<nav>
+            <a href="index.html" class="logo-container">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 602 180" role="img" aria-label="Amazon logo">
+                    <path fill="#FF9900" d="M374.006 142.184c-35 25.797-85.729 39.561-129.406 39.561-61.242 0-116.376-22.651-158.087-60.325-3.278-2.962-.341-7 3.591-4.693 45.015 26.191 100.673 41.947 158.166 41.947 38.775 0 81.43-8.022 120.65-24.67 5.925-2.516 10.88 3.88 5.086 8.18z"/>
+                    <path fill="#FF9900" d="M388.557 125.536c-4.457-5.715-29.573-2.7-40.846-1.363-3.434.419-3.959-2.569-.865-4.719 20.003-14.078 52.827-10.015 56.654-5.296 3.828 4.745-.996 37.648-19.793 53.352-2.884 2.411-5.637 1.127-4.352-2.072 4.22-10.539 13.685-34.16 9.202-39.902z"/>
+                    <path fill="#FFFFFF" d="M348.497 20.066V6.381c0-2.071 1.573-3.46 3.461-3.46h61.269c1.966 0 3.54 1.415 3.54 3.46v11.62c-.027 1.966-1.679 4.535-4.615 8.599l-31.749 45.329c11.798-.289 24.25 1.468 34.947 7.498 2.412 1.363 3.068 3.356 3.251 5.322v14.474c0 1.992-2.202 4.325-4.509 3.12-18.85-9.884-43.887-10.96-64.73.104-2.123 1.154-4.351-1.153-4.351-3.146v-13.737c0-2.229.026-6.03 2.254-9.412l36.782-52.748h-32.011c-1.967 0-3.54-1.39-3.54-3.461zM124.999 105.454h-18.64c-1.783-.13-3.199-1.468-3.33-3.172V6.617c0-1.914 1.6-3.435 3.592-3.435h17.382c1.809.079 3.25 1.468 3.382 3.199v12.505h.34c4.536-12.086 13.056-17.722 24.54-17.722 11.666 0 18.954 5.636 24.198 17.722 4.509-12.086 14.76-17.722 25.744-17.722 7.813 0 16.36 3.224 21.577 10.46 5.899 8.049 4.693 19.741 4.693 29.992l-.026 60.378c0 1.913-1.6 3.461-3.592 3.461h-18.614c-1.862-.13-3.356-1.625-3.356-3.461V51.29c0-4.037.367-14.104-.524-17.932-1.39-6.423-5.558-8.232-10.959-8.232-4.509 0-9.228 3.015-11.142 7.839-1.914 4.824-1.73 12.898-1.73 18.325v50.704c0 1.913-1.6 3.461-3.592 3.461h-18.614c-1.888-.13-3.356-1.625-3.356-3.461l-.026-50.704c0-10.67 1.757-26.374-11.483-26.374-13.397 0-12.872 15.311-12.872 26.374v50.704c0 1.913-1.6 3.461-3.592 3.461zM469.514 1.164c27.66 0 42.629 23.752 42.629 53.954 0 29.18-16.543 52.329-42.629 52.329-27.16 0-41.947-23.753-41.947-53.352 0-29.782 14.97-52.931 41.947-52.931zm.158 19.531c-13.738 0-14.603 18.719-14.603 30.385 0 11.693-.184 36.651 14.445 36.651 14.446 0 15.127-20.134 15.127-32.404 0-8.075-.341-17.723-2.779-25.378-2.097-6.659-6.266-9.254-12.19-9.254zM548.009 105.454h-18.562c-1.861-.13-3.356-1.625-3.356-3.461l-.026-95.691c.157-1.756 1.704-3.12 3.592-3.12h17.277c1.625.079 2.962 1.18 3.33 2.674v14.63h.34c5.217-13.083 12.532-19.322 25.404-19.322 8.363 0 16.517 3.015 21.76 11.273 4.877 7.655 4.877 20.528 4.877 29.782v60.22c-.21 1.678-1.757 3.015-3.592 3.015h-18.693c-1.704-.13-3.12-1.39-3.303-3.015V50.478c0-10.461 1.206-25.771-11.667-25.771-4.535 0-8.704 3.041-10.775 7.655-2.622 5.846-2.962 11.667-2.962 18.116v51.516c-.026 1.913-1.652 3.461-3.644 3.461zM299.291 59.512c0-7.262.184-13.318-3.487-19.767-2.962-5.243-7.682-8.468-12.898-8.468-7.157 0-11.352 5.453-11.352 13.502 0 15.887 14.236 18.771 27.737 18.771v-4.038zm18.797 45.434c-1.232 1.101-3.015 1.18-4.404.446-6.187-5.139-7.314-7.524-10.696-12.427-10.225 10.434-17.487 13.554-30.726 13.554-15.704 0-27.895-9.674-27.895-29.048 0-15.127 8.18-25.43 19.872-30.464 10.12-4.457 24.25-5.243 35.052-6.476v-2.412c0-4.43.341-9.674-2.281-13.502-2.255-3.434-6.607-4.85-10.46-4.85-7.105 0-13.423 3.644-14.97 11.195-.315 1.678-1.547 3.33-3.251 3.408l-18.063-1.94c-1.521-.341-3.225-1.573-2.779-3.906C250.85 3.644 277.828 0 302.499 0c12.532 0 28.907 3.33 38.775 12.795 12.532 11.667 11.352 27.236 11.352 44.201v40.025c0 12.06 5.007 17.355 9.725 23.887 1.652 2.308 2.02 5.06-.079 6.764-5.243 4.404-14.603 12.636-19.74 17.277l-.026-.003z"/>
+                </svg>
+            </a>
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>fossil Elegant Classic - Amazon-inspired Watch Page</title>
+                <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                        margin: 0;
+                        padding: 0;
+                        background-color: #f3f3f3;
+                    }
+                    header {
+                        background-color: #131921;
+                        color: white;
+                        padding: 10px 0;
+                    }
+                    nav {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        max-width: 1200px;
+                        margin: 0 auto;
+                        padding: 0 20px;
+                    }
+                    .logo {
+                        font-size: 24px;
+                        font-weight: bold;
+                        color: white;
+                        text-decoration: none;
+                    }
+                    .search-bar {
+                        flex-grow: 1;
+                        margin: 0 20px;
+                    }
+                    .search-bar input {
+                        width: 100%;
+                        padding: 10px;
+                        border: none;
+                        border-radius: 4px;
+                    }
+                    .nav-links a {
+                        color: white;
+                        text-decoration: none;
+                        margin-left: 20px;
+                    }
+                    .product-detail {
+                        max-width: 1200px;
+                        margin: 40px auto;
+                        padding: 0 20px;
+                        display: flex;
+                        gap: 40px;
+                    }
+                    .product-image {
+                        flex: 1;
+                    }
+                    .product-image img {
+                        width: 100%;
+                        height: auto;
+                        border-radius: 8px;
+                    }
+                    .product-info {
+                        flex: 1;
+                    }
+                    .product-brand {
+                        font-size: 24px;
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                    }
+                    .product-name {
+                        font-size: 36px;
+                        margin-bottom: 20px;
+                    }
+                    .product-price {
+                        font-size: 24px;
+                        font-weight: bold;
+                        margin-bottom: 20px;
+                    }
+                    .product-description {
+                        margin-bottom: 20px;
+                        line-height: 1.6;
+                    }
+                    .add-to-cart {
+                        display: inline-block;
+                        padding: 10px 20px;
+                        background-color: #ff9900;
+                        color: black;
+                        text-decoration: none;
+                        border-radius: 4px;
+                        font-weight: bold;
+                    }
+                    .back-to-products {
+                        display: inline-block;
+                        padding: 10px 20px;
+                        background-color: #3498db;
+                        color: white;
+                        text-decoration: none;
+                        border-radius: 4px;
+                        font-weight: bold;
+                        margin-right: 10px;
+                    }
+                    footer {
+                        background-color: #131921;
+                        color: white;
+                        text-align: center;
+                        padding: 20px 0;
+                        margin-top: 40px;
+                    }
+                </style>
+            </head>
+            <body>
+                <header>
+                    <nav>
+                        <a href="index.html" class="logo">amazon</a>
+                        <div class="search-bar">
+                            <input type="text" placeholder="Search for watches">
+                        </div>
+                        <div class="nav-links">
+                            <a href="#">Account</a>
+                            <a href="#">Orders</a>
+                            <a href="#">Cart</a>
+                        </div>
+                    </nav>
+                </header>
+            
+                <main>
+                    <section class="product-detail">
+                        <div class="product-image">
+                            <img src="https://assets.onecompiler.app/42xq2j5ah/42xq2kpwj/fossil.png" alt="fossil Elegant Classic Watch">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">Fossil</div>
+                            <h1 class="product-name">Minimalist Hybrid</h1>
+                            <div class="product-price">₹12,999</div>
+                            <div class="product-description">
+                                <p>The Fossil Minimalist Hybrid is a timeless masterpiece that combines sophistication with functionality. This watch features:</p>
+                                <ul>
+                                    <li>Sleek stainless steel case</li>
+                                    <li>Genuine leather strap</li>
+                                    <li>Water-resistant up to 30 meters</li>
+                                    <li>Scratch-resistant sapphire crystal</li>
+                                    <li>Japanese quartz movement for precise timekeeping</li>
+                                </ul>
+                                <p>Perfect for both formal occasions and everyday wear, the Titan Elegant Classic is a versatile addition to any watch collection.</p>
+                            </div>
+                            <a href="index.html" class="back-to-products">Back to Products</a>
+                            <a href="#" class="add-to-cart">Add to Cart</a>
+                        </div>
+                    </section>
+                </main>
+            
+                <footer>
+                    <p>&copy; 2024 Amazon-inspired Watch Page. All rights reserved.</p>
+                </footer>
+            </body>
+            </html>
+            
